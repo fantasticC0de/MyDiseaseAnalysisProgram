@@ -1,0 +1,27 @@
+CREATE TABLE disease_analysis_table (
+    "Country" VARCHAR(255),
+    "Year" INT,
+    "Disease Name" VARCHAR(255),
+    "Disease Category" VARCHAR(255),
+    "Prevalence Rate (%)" DECIMAL(5,2),
+    "Incidence Rate (%)" DECIMAL(5,2),
+    "Mortality Rate (%)" DECIMAL(5,2),
+    "Age Group" VARCHAR(50),
+    "Gender" VARCHAR(10),
+    "Population Affected" INT,
+    "Healthcare Access (%)" DECIMAL(5,2),
+    "Doctors per 1000" DECIMAL(4,2),
+    "Hospital Beds per 1000" DECIMAL(4,2),
+    "Treatment Type" VARCHAR(255),
+    "Average Treatment Cost (USD)" DECIMAL(10,2),
+    "Availability of Vaccines/Treatment" VARCHAR(50),
+    "Recovery Rate (%)" DECIMAL(5,2),
+    "DALYs" INT,
+    "Improvement in 5 Years (%)" DECIMAL(5,2),
+    "Per Capita Income (USD)" DECIMAL(10,2),
+    "Education Index" DECIMAL(3,2),
+    "Urbanization Rate (%)" DECIMAL(5,2)
+);
+
+
+\copy disease_analysis_table FROM '/Users/Student/Downloads/Engineering Practicum/Independant Project/DiseaseAnalysis_Term2Project/Backend/csvs/GlobalHealth.csv' WITH CSV HEADER DELIMITER ','
